@@ -51,6 +51,10 @@ class Kontakt(BaseHandler):
     def get(self):
         return self.render_template("kontakt.html")
 
+class Prazna(BaseHandler):
+    def get(self):
+        return self.render_template("prazna.html")
+
 
 
 app = webapp2.WSGIApplication([
@@ -59,4 +63,5 @@ app = webapp2.WSGIApplication([
     webapp2.Route('/projekti', MojiProjekti),
     webapp2.Route('/blog', Blog),
     webapp2.Route('/kontakt', Kontakt),
+    webapp2.Route('/prazna', Prazna),
 ], debug=True)
